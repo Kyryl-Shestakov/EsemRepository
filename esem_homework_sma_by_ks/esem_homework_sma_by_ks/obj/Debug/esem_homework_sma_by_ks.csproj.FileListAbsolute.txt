@@ -1,0 +1,9 @@
+D:\Documents\Visual Studio 2013\Projects\Educational_Labs\sophomore_year\esem_homework_sma_by_ks\esem_homework_sma_by_ks\bin\Debug\esem_homework_sma_by_ks.exe.config
+D:\Documents\Visual Studio 2013\Projects\Educational_Labs\sophomore_year\esem_homework_sma_by_ks\esem_homework_sma_by_ks\obj\Debug\esem_homework_sma_by_ks.csprojResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2013\Projects\Educational_Labs\sophomore_year\esem_homework_sma_by_ks\esem_homework_sma_by_ks\obj\Debug\MainWindow.baml
+D:\Documents\Visual Studio 2013\Projects\Educational_Labs\sophomore_year\esem_homework_sma_by_ks\esem_homework_sma_by_ks\obj\Debug\MainWindow.g.cs
+D:\Documents\Visual Studio 2013\Projects\Educational_Labs\sophomore_year\esem_homework_sma_by_ks\esem_homework_sma_by_ks\obj\Debug\App.g.cs
+D:\Documents\Visual Studio 2013\Projects\Educational_Labs\sophomore_year\esem_homework_sma_by_ks\esem_homework_sma_by_ks\obj\Debug\esem_homework_sma_by_ks_MarkupCompile.cache
+D:\Documents\Visual Studio 2013\Projects\Educational_Labs\sophomore_year\esem_homework_sma_by_ks\esem_homework_sma_by_ks\obj\Debug\esem_homework_sma_by_ks.g.resources
+D:\Documents\Visual Studio 2013\Projects\Educational_Labs\sophomore_year\esem_homework_sma_by_ks\esem_homework_sma_by_ks\obj\Debug\esem_homework_sma_by_ks.Properties.Resources.resources
+D:\Documents\Visual Studio 2013\Projects\Educational_Labs\sophomore_year\esem_homework_sma_by_ks\esem_homework_sma_by_ks\obj\Debug\esem_homework_sma_by_ks.csproj.GenerateResource.Cache
