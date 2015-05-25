@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="oop_term_paper_12_exe_cs_by_ks.GroupDatabaseMenu">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIEAIACABAAAAAAAAAAAAAIAQAAAAAAAQAAAAAA=</HashCode>
+      <FileName>GroupDatabaseMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="oop_term_paper_12_exe_cs_by_ks.Menu">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="oop_term_paper_12_exe_cs_by_ks.Program">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="oop_term_paper_12_exe_cs_by_ks.SearchMenu">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAACCAAAAAAABAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>SearchMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="oop_term_paper_12_exe_cs_by_ks.SubjectRepositoryMenu">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BABAgIAAAAAAAAAAAAAAAAQACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SubjectRepositoryMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

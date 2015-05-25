@@ -1,0 +1,8 @@
+C:\Users\Kyryl\Documents\Visual Studio 2013\Projects\Educational_Labs\sophomore_year\oop_term_paper_cs_by_ks\oop_term_paper_12_exe_cs_by_ks\bin\Debug\oop_term_paper_12_exe_cs_by_ks.exe.config
+C:\Users\Kyryl\Documents\Visual Studio 2013\Projects\Educational_Labs\sophomore_year\oop_term_paper_cs_by_ks\oop_term_paper_12_exe_cs_by_ks\bin\Debug\oop_term_paper_12_exe_cs_by_ks.exe
+C:\Users\Kyryl\Documents\Visual Studio 2013\Projects\Educational_Labs\sophomore_year\oop_term_paper_cs_by_ks\oop_term_paper_12_exe_cs_by_ks\bin\Debug\oop_term_paper_12_exe_cs_by_ks.pdb
+C:\Users\Kyryl\Documents\Visual Studio 2013\Projects\Educational_Labs\sophomore_year\oop_term_paper_cs_by_ks\oop_term_paper_12_exe_cs_by_ks\bin\Debug\oop_term_paper_12_dll_cs_by_ks.dll
+C:\Users\Kyryl\Documents\Visual Studio 2013\Projects\Educational_Labs\sophomore_year\oop_term_paper_cs_by_ks\oop_term_paper_12_exe_cs_by_ks\bin\Debug\oop_term_paper_12_dll_cs_by_ks.pdb
+C:\Users\Kyryl\Documents\Visual Studio 2013\Projects\Educational_Labs\sophomore_year\oop_term_paper_cs_by_ks\oop_term_paper_12_exe_cs_by_ks\obj\Debug\oop_term_paper_12_exe_cs_by_ks.csprojResolveAssemblyReference.cache
+C:\Users\Kyryl\Documents\Visual Studio 2013\Projects\Educational_Labs\sophomore_year\oop_term_paper_cs_by_ks\oop_term_paper_12_exe_cs_by_ks\obj\Debug\oop_term_paper_12_exe_cs_by_ks.exe
+C:\Users\Kyryl\Documents\Visual Studio 2013\Projects\Educational_Labs\sophomore_year\oop_term_paper_cs_by_ks\oop_term_paper_12_exe_cs_by_ks\obj\Debug\oop_term_paper_12_exe_cs_by_ks.pdb
