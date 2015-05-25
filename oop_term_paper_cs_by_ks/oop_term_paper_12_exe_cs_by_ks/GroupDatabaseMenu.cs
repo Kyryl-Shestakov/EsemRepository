@@ -59,7 +59,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
             
             
             Console.WriteLine("Available subjects:");
-            SubjectRepositoryMenu.DisplaySubjects();
+            SubjectRepositoryMenu.GetInstance().DisplaySubjects();
             int subjectRelatedChoice = 0;
 
             do
@@ -76,7 +76,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
                     continue;
                 }
 
-                if(subjectRelatedChoice > SubjectRepositoryMenu.Count || subjectRelatedChoice < 0)
+                if (subjectRelatedChoice > SubjectRepositoryMenu.GetInstance().Count || subjectRelatedChoice < 0)
                 {
                     Console.WriteLine("The number is out of range. Try again.");
                     continue;
@@ -84,14 +84,14 @@ namespace oop_term_paper_12_exe_cs_by_ks
 
                 if (subjectRelatedChoice != 0)
                 {
-                    if (subjectList.Contains(SubjectRepositoryMenu.GetSubject(subjectRelatedChoice - 1)))
+                    if (subjectList.Contains(SubjectRepositoryMenu.GetInstance().GetSubject(subjectRelatedChoice - 1)))
                     {
                         Console.WriteLine("Such discipline is already added");
                         continue;
                     }
                     else
                     {
-                        subjectList.Add(SubjectRepositoryMenu.GetSubject(subjectRelatedChoice - 1));
+                        subjectList.Add(SubjectRepositoryMenu.GetInstance().GetSubject(subjectRelatedChoice - 1));
                     }
                 }
                 
@@ -196,7 +196,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
 
                                     foreach(string subject in currentGroup.SubjectNameList)
                                     {
-                                        list.Add(SubjectRepository.subjectList.Find((item) =>
+                                        list.Add(SubjectRepository.GetInstance().subjectList.Find((item) =>
                                             {
                                                 return item.Name.Equals(subject);
                                             }));

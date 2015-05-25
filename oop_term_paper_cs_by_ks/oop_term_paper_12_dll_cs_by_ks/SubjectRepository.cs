@@ -8,12 +8,19 @@ using System.Threading.Tasks;
 
 namespace oop_term_paper_12_dll_cs_by_ks
 {
-    public static class SubjectRepository
+    public class SubjectRepository
     {
-        [DataMember]
-        public static List<Subject> subjectList;
+        public static SubjectRepository subjectRepository;
 
-        static SubjectRepository()
+        public static SubjectRepository GetInstance()
+        {
+            return (subjectRepository != null) ? subjectRepository : (subjectRepository = new SubjectRepository());
+        }
+
+        [DataMember]
+        public List<Subject> subjectList { get; private set; }
+
+        private SubjectRepository()
         {
             if (File.Exists("subjects.xml"))
             {
@@ -30,7 +37,7 @@ namespace oop_term_paper_12_dll_cs_by_ks
             }
         }
 
-        public static void AddSubject(Subject item)
+        public void AddSubject(Subject item)
         {
             if(item == null)
             {
@@ -46,7 +53,7 @@ namespace oop_term_paper_12_dll_cs_by_ks
             }
         }
 
-        public static bool RemoveSubject(string discipline)
+        public bool RemoveSubject(string discipline)
         {
             if (discipline == null)
             {
@@ -70,7 +77,7 @@ namespace oop_term_paper_12_dll_cs_by_ks
             return foundAndDeleted;
         }
 
-        public static void Save()
+        public void Save()
         {
             var ds = new DataContractSerializer(typeof(List<Subject>));
 

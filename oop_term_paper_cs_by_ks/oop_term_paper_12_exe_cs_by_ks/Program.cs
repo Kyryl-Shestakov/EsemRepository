@@ -10,7 +10,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
     {
         static void Main(string[] args)
         {
-            Menu.Run();
+            Menu.GetInstance().Run();
         }
     }
 }

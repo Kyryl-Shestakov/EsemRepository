@@ -6,9 +6,21 @@ using System.IO;
 
 namespace oop_term_paper_12_exe_cs_by_ks
 {
-    static class Menu
+    class Menu
     {
-        public static void Run()
+        private static Menu menu;
+
+        public static Menu GetInstance() 
+        {
+            return (menu != null) ? menu : (menu = new Menu());
+        }
+
+        private Menu()
+        {
+
+        }
+
+        public void Run()
         {
             Console.WriteLine("Welcome to Student Storage System\n");
 
@@ -38,7 +50,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
                     case 0:
                         {
                             GroupDatabaseMenu.Save();
-                            SubjectRepositoryMenu.Save();
+                            SubjectRepositoryMenu.GetInstance().Save();
                         }
                         break;
                         
@@ -161,7 +173,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
 
                                     case 1:
                                         {
-                                            SubjectRepositoryMenu.AddSubject();
+                                            SubjectRepositoryMenu.GetInstance().AddSubject();
                                             Console.WriteLine("The subject was added");
                                             Console.WriteLine("Press any key to continue");
                                             Console.ReadKey(true);
@@ -170,7 +182,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
 
                                     case 2:
                                         {
-                                            SubjectRepositoryMenu.RemoveSubject();
+                                            SubjectRepositoryMenu.GetInstance().RemoveSubject();
                                             Console.WriteLine("Press any key to continue");
                                             Console.ReadKey(true);
                                         }
@@ -178,7 +190,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
 
                                     case 3:
                                         {
-                                            SubjectRepositoryMenu.DisplaySubjects();
+                                            SubjectRepositoryMenu.GetInstance().DisplaySubjects();
                                             Console.WriteLine("Press any key to continue");
                                             Console.ReadKey(true);
                                         }
@@ -233,7 +245,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
 
                                     case 1:
                                         {
-                                            SearchMenu.FindStudent();
+                                            SearchMenu.GetInstance().FindStudent();
                                             Console.WriteLine("Press any key to continue");
                                             Console.ReadKey(true);
                                         }
@@ -241,7 +253,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
 
                                     case 2:
                                         {
-                                            SearchMenu.FindSuccessfulStudentsByAverageGrade();
+                                            SearchMenu.GetInstance().FindSuccessfulStudentsByAverageGrade();
                                             Console.WriteLine("Press any key to continue");
                                             Console.ReadKey(true);
                                         }
@@ -249,7 +261,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
 
                                     case 3:
                                         {
-                                            SearchMenu.FindUnsuccessfulStudentsByAverageGrade();
+                                            SearchMenu.GetInstance().FindUnsuccessfulStudentsByAverageGrade();
                                             Console.WriteLine("Press any key to continue");
                                             Console.ReadKey(true);
                                         }
@@ -257,7 +269,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
 
                                     case 4:
                                         {
-                                            SearchMenu.FindSuccessfulStudentsRelativeSpecificSubject();
+                                            SearchMenu.GetInstance().FindSuccessfulStudentsRelativeSpecificSubject();
                                             Console.WriteLine("Press any key to continue");
                                             Console.ReadKey(true);
                                         }
@@ -265,7 +277,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
 
                                     case 5:
                                         {
-                                            SearchMenu.FindUnsuccessfulStudentsRelativeSpecificSubject();
+                                            SearchMenu.GetInstance().FindUnsuccessfulStudentsRelativeSpecificSubject();
                                             Console.WriteLine("Press any key to continue");
                                             Console.ReadKey(true);
                                         }

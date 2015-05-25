@@ -6,9 +6,21 @@ using oop_term_paper_12_dll_cs_by_ks;
 
 namespace oop_term_paper_12_exe_cs_by_ks
 {
-    static class SubjectRepositoryMenu
+    class SubjectRepositoryMenu
     {
-        public static void AddSubject()
+        private static SubjectRepositoryMenu subjectRepositoryMenu;
+
+        public static SubjectRepositoryMenu GetInstance()
+        {
+            return (subjectRepositoryMenu != null) ? subjectRepositoryMenu : (subjectRepositoryMenu = new SubjectRepositoryMenu());
+        }
+
+        private SubjectRepositoryMenu()
+        {
+
+        }
+
+        public void AddSubject()
         {
             string name;
             string firstName;
@@ -90,7 +102,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
                         moduleList.Add(Module.ModuleFactory(labWorksCounts[i], grades, 0.0));
                     }
 
-                    SubjectRepository.AddSubject(Subject.SubjectFactory(name, instructor, n, moduleList, 0));
+                    SubjectRepository.GetInstance().AddSubject(Subject.SubjectFactory(name, instructor, n, moduleList, 0));
                     break;
                 }
                 catch(Exception e)
@@ -101,12 +113,12 @@ namespace oop_term_paper_12_exe_cs_by_ks
             }
         }
 
-        public static void RemoveSubject()
+        public void RemoveSubject()
         {
             Console.Write("Input a name of a discipline to remove: ");
             string discipline = Console.ReadLine();
-            
-            if(SubjectRepository.RemoveSubject(discipline))
+
+            if (SubjectRepository.GetInstance().RemoveSubject(discipline))
             {
                 Console.WriteLine("Subject was deleted");
             }
@@ -116,38 +128,38 @@ namespace oop_term_paper_12_exe_cs_by_ks
             }
         }
 
-        public static void DisplaySubjects()
+        public void DisplaySubjects()
         {
             int i = 0;
 
-            foreach(Subject subject in SubjectRepository.subjectList)
+            foreach (Subject subject in SubjectRepository.GetInstance().subjectList)
             {
                 Console.Write(++i + " ");
                 Console.WriteLine(subject.ToString());
             }
         }
 
-        public static void Save()
+        public void Save()
         {
-            SubjectRepository.Save();
+            SubjectRepository.GetInstance().Save();
         }
 
-        public static int Count
+        public int Count
         {
             get
             {
-                return SubjectRepository.subjectList.Count;
+                return SubjectRepository.GetInstance().subjectList.Count;
             }
         }
 
-        public static Subject GetSubject(int index)
+        public Subject GetSubject(int index)
         {
-            if(index < 0 || index >= SubjectRepository.subjectList.Count)
+            if (index < 0 || index >= SubjectRepository.GetInstance().subjectList.Count)
             {
                 throw new ArgumentOutOfRangeException();
             }
 
-            return SubjectRepository.subjectList[index];
+            return SubjectRepository.GetInstance().subjectList[index];
         }
     }
 }

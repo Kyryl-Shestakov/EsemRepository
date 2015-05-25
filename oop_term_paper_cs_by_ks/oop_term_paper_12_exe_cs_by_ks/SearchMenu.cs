@@ -7,9 +7,21 @@ using oop_term_paper_12_dll_cs_by_ks;
 
 namespace oop_term_paper_12_exe_cs_by_ks
 {
-    static class SearchMenu
+    class SearchMenu
     {
-        public static void FindStudent()
+        private static SearchMenu searchMenu;
+
+        public static SearchMenu GetInstance()
+        {
+            return (searchMenu != null) ? searchMenu : (searchMenu = new SearchMenu());
+        }
+
+        private SearchMenu()
+        {
+
+        }
+
+        public void FindStudent()
         {
             Console.Write("Input a full name and transcript number of a student: ");
             string studentInput = Console.ReadLine();
@@ -78,7 +90,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
             }
         }
 
-        public static void FindSuccessfulStudentsByAverageGrade()
+        public void FindSuccessfulStudentsByAverageGrade()
         {
             Console.Write("Input a rate of success: ");
             int successRate;
@@ -104,7 +116,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
             }
         }
 
-        public static void FindUnsuccessfulStudentsByAverageGrade()
+        public void FindUnsuccessfulStudentsByAverageGrade()
         {
             Console.Write("Input a rate of success: ");
             int successRate;
@@ -130,12 +142,12 @@ namespace oop_term_paper_12_exe_cs_by_ks
             }
         }
 
-        public static void FindSuccessfulStudentsRelativeSpecificSubject()
+        public void FindSuccessfulStudentsRelativeSpecificSubject()
         {
             Console.Write("Input the name of a subject: ");
             string discipline = Console.ReadLine();
 
-            if (!SubjectRepository.subjectList.Exists((item) =>
+            if (!SubjectRepository.GetInstance().subjectList.Exists((item) =>
                 {
                     return item.Name.Equals(discipline);
                 }))
@@ -161,12 +173,12 @@ namespace oop_term_paper_12_exe_cs_by_ks
             }
         }
 
-        public static void FindUnsuccessfulStudentsRelativeSpecificSubject()
+        public void FindUnsuccessfulStudentsRelativeSpecificSubject()
         {
             Console.Write("Input the name of a subject: ");
             string discipline = Console.ReadLine();
 
-            if (!SubjectRepository.subjectList.Exists((item) =>
+            if (!SubjectRepository.GetInstance().subjectList.Exists((item) =>
             {
                 return item.Name.Equals(discipline);
             }))
