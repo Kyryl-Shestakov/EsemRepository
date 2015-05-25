@@ -6,11 +6,18 @@ using System.Runtime.Serialization;
 
 namespace oop_term_paper_12_exe_cs_by_ks
 {
-    static class GroupDatabaseMenu
+    class GroupDatabaseMenu
     {
-        public static GroupDatabase groupDatabase;
+        private static GroupDatabaseMenu groupDatabaseMenu;
 
-        static GroupDatabaseMenu()
+        public static GroupDatabaseMenu GetInstance()
+        {
+            return (groupDatabaseMenu != null) ? groupDatabaseMenu : (groupDatabaseMenu = new GroupDatabaseMenu()) ;
+        }
+
+        public GroupDatabase groupDatabase { get; private set; }
+
+        private GroupDatabaseMenu()
         {
             if (File.Exists("groups.xml"))
             {
@@ -27,7 +34,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
             }
         }
 
-        public static void AddTheGroup()
+        public void AddTheGroup()
         {
             string groupId;
             int year;
@@ -101,7 +108,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
             groupDatabase.Add(Group.GroupFactory(year, groupId, new List<Student>(), subjectList));
         }
 
-        public static void RemoveTheGroup()
+        public void RemoveTheGroup()
         {
             string groupId;
             
@@ -118,7 +125,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
             }
         }
 
-        public static void ChangeTheGroup()
+        public void ChangeTheGroup()
         {
             string groupId;
 
@@ -508,7 +515,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
             }
         }
 
-        public static void SelectTheGroup()
+        public void SelectTheGroup()
         {
             string groupId;
 
@@ -597,7 +604,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
             }
         }
 
-        public static void ShowAllGroups()
+        public void ShowAllGroups()
         {
             int i = 0;
 
@@ -607,7 +614,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
             }
         }
 
-        static void ShowStudent(Group group)
+        void ShowStudent(Group group)
         {
             if(group.Count == 0)
             {
@@ -697,7 +704,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
             while(subjectRelatedChoice != 0);
         }
 
-        public static void Save()
+        public void Save()
         {
             groupDatabase.Save("groups.xml");
         }

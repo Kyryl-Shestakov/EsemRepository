@@ -49,7 +49,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
                 {
                     case 0:
                         {
-                            GroupDatabaseMenu.Save();
+                            GroupDatabaseMenu.GetInstance().Save();
                             SubjectRepositoryMenu.GetInstance().Save();
                         }
                         break;
@@ -88,7 +88,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
 
                                     case 1:
                                         {
-                                            GroupDatabaseMenu.AddTheGroup();
+                                            GroupDatabaseMenu.GetInstance().AddTheGroup();
                                             Console.WriteLine("Press any key to continue");
                                             Console.ReadKey(true);
                                         }
@@ -96,7 +96,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
 
                                     case 2:
                                         {
-                                            GroupDatabaseMenu.RemoveTheGroup();
+                                            GroupDatabaseMenu.GetInstance().RemoveTheGroup();
                                             Console.WriteLine("Press any key to continue");
                                             Console.ReadKey(true);
                                         }
@@ -104,7 +104,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
 
                                     case 3:
                                         {
-                                            GroupDatabaseMenu.ChangeTheGroup();
+                                            GroupDatabaseMenu.GetInstance().ChangeTheGroup();
                                             Console.WriteLine("Press any key to continue");
                                             Console.ReadKey(true);
                                         }
@@ -112,7 +112,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
 
                                     case 4:
                                         {
-                                            GroupDatabaseMenu.SelectTheGroup();
+                                            GroupDatabaseMenu.GetInstance().SelectTheGroup();
                                             Console.WriteLine("Press any key to continue");
                                             Console.ReadKey(true);
                                         }
@@ -120,7 +120,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
 
                                     case 5:
                                         {
-                                            GroupDatabaseMenu.ShowAllGroups();
+                                            GroupDatabaseMenu.GetInstance().ShowAllGroups();
                                             Console.WriteLine("Press any key to continue");
                                             Console.ReadKey(true);
                                         }

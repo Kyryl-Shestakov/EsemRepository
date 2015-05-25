@@ -26,7 +26,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
             Console.Write("Input a full name and transcript number of a student: ");
             string studentInput = Console.ReadLine();
 
-            foreach(Group group in GroupDatabaseMenu.groupDatabase)
+            foreach(Group group in GroupDatabaseMenu.GetInstance().groupDatabase)
             {
                 foreach(Student student in group)
                 {
@@ -104,7 +104,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
                 successRate = 101;
             }
 
-            foreach(Group group in GroupDatabaseMenu.groupDatabase)
+            foreach (Group group in GroupDatabaseMenu.GetInstance().groupDatabase)
             {
                 foreach(Student student in group)
                 {
@@ -130,7 +130,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
                 successRate = 0;
             }
 
-            foreach (Group group in GroupDatabaseMenu.groupDatabase)
+            foreach (Group group in GroupDatabaseMenu.GetInstance().groupDatabase)
             {
                 foreach (Student student in group)
                 {
@@ -167,7 +167,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
                 successRate = 101.0;
             }
 
-            foreach(Student st in GroupDatabaseMenu.groupDatabase.FindSuccessfulStudentsRelativeSpecificDiscipline(discipline, successRate))
+            foreach (Student st in GroupDatabaseMenu.GetInstance().groupDatabase.FindSuccessfulStudentsRelativeSpecificDiscipline(discipline, successRate))
             {
                 Console.WriteLine(st.ToString());
             }
@@ -198,7 +198,7 @@ namespace oop_term_paper_12_exe_cs_by_ks
                 successRate = 0.0;
             }
 
-            foreach (Student st in GroupDatabaseMenu.groupDatabase.FindUnSuccessfulStudentsRelativeSpecificDiscipline(discipline, successRate))
+            foreach (Student st in GroupDatabaseMenu.GetInstance().groupDatabase.FindUnSuccessfulStudentsRelativeSpecificDiscipline(discipline, successRate))
             {
                 Console.WriteLine(st.ToString());
             }
