@@ -14,21 +14,11 @@ namespace oop_term_paper_12_dll_cs_by_ks
 
         public GroupDatabase(List<Group> groupList)
         {
-            if (groupList == null)
-            {
-                groupList = new List<Group>();
-            }
-
             this.groupList = groupList;
         }
 
         public void Add(Group item)
         {
-            if (item == null)
-            {
-                throw new ArgumentNullException();
-            }
-
             //foreach (Group group in groupList)
             //{
             //    if (group.GroupId.Equals(item.GroupId))
@@ -48,11 +38,6 @@ namespace oop_term_paper_12_dll_cs_by_ks
 
         public int IndexOf(Group item)
         {
-            if (item == null)
-            {
-                throw new ArgumentNullException();
-            }
-
             foreach (Group group in groupList)
             {
                 if (group.GroupId.Equals(item.GroupId))
@@ -98,11 +83,6 @@ namespace oop_term_paper_12_dll_cs_by_ks
 
         public void RemoveAt(int index)
         {
-            if (index < 0 || index >= groupList.Count)
-            {
-                throw new ArgumentOutOfRangeException();
-            }
-
             groupList.RemoveAt(index);
         }
 
@@ -126,11 +106,6 @@ namespace oop_term_paper_12_dll_cs_by_ks
 
         public bool Contains(Group item)
         {
-            if (item == null)
-            {
-                throw new ArgumentNullException();
-            }
-
             foreach (Group group in groupList)
             {
                 if (group.GroupId.Equals(item.GroupId))
@@ -166,11 +141,6 @@ namespace oop_term_paper_12_dll_cs_by_ks
 
         public bool Remove(Group item)
         {
-            if (item == null)
-            {
-                throw new ArgumentNullException();
-            }
-
             foreach (Group group in groupList)
             {
                 if (group.GroupId.Equals(item.GroupId))
@@ -186,11 +156,6 @@ namespace oop_term_paper_12_dll_cs_by_ks
         public bool Remove(string id)
         {
             bool foundAndDeleted = true;
-
-            if(id == null)
-            {
-                throw new ArgumentNullException();
-            }
 
             if (Exists((item) =>
             {
@@ -222,11 +187,6 @@ namespace oop_term_paper_12_dll_cs_by_ks
 
         public List<Student> FindSuccessfulStudentsRelativeSpecificDiscipline(string discipline, double subjectSuccessRate)
         {
-            if(discipline == null)
-            {
-                throw new ArgumentNullException();
-            }
-
             List<Student> tempStudentList = new List<Student>();
 
             List<Group> tempGroupList = groupList.FindAll((item1) =>
@@ -264,11 +224,6 @@ namespace oop_term_paper_12_dll_cs_by_ks
 
         public List<Student> FindUnSuccessfulStudentsRelativeSpecificDiscipline(string discipline, double subjectSuccessRate)
         {
-            if (discipline == null)
-            {
-                throw new ArgumentNullException();
-            }
-
             List<Student> tempStudentList = new List<Student>();
 
             List<Group> tempGroupList = groupList.FindAll((item1) =>
@@ -278,11 +233,6 @@ namespace oop_term_paper_12_dll_cs_by_ks
                     return item2.Equals(discipline);
                 });
             });
-
-            if (tempGroupList == null)
-            {
-                return tempStudentList;
-            }
 
             foreach (Group gr in tempGroupList)
             {

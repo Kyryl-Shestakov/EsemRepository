@@ -33,11 +33,6 @@ namespace oop_term_paper_12_dll_cs_by_ks
 
         public static Instructor InstructorFactory(string firstName, string lastName)
         {
-            if ((firstName == null) || (lastName == null))
-            {
-                throw new ArgumentNullException();
-            }
-
             if (!Regex.IsMatch(firstName, "^[A-Z][a-z]+(-[A-Z][a-z]+)?$") || !Regex.IsMatch(lastName, "^[A-Z][a-z]+(-[A-Z][a-z]+)?$"))
             {
                 throw new ArgumentException("The names are wrong");

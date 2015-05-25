@@ -56,19 +56,9 @@ namespace oop_term_paper_12_dll_cs_by_ks
 
         public static Student StudentFactory(string firstName, string lastName, string transcriptNumber, List<Subject> subjectList)
         {
-            if ((firstName == null) || (lastName == null) || (transcriptNumber == null))
-            {
-                throw new ArgumentNullException();
-            }
-
             if (!Regex.IsMatch(firstName, "^[A-Z][a-z]+(-[A-Z][a-z]+)?$") || !Regex.IsMatch(lastName, "^[A-Z][a-z]+(-[A-Z][a-z]+)?$") || !Regex.IsMatch(transcriptNumber, @"^[A-Z]{2}[0-9]+$"))
             {
                 throw new ArgumentException();
-            }
-
-            if (subjectList == null)
-            {
-                subjectList = new List<Subject>();
             }
 
             List<Subject> newSubjectList = new List<Subject>();
@@ -109,11 +99,6 @@ namespace oop_term_paper_12_dll_cs_by_ks
         {
             get
             {
-                if (index < 0 || index >= SubjectList.Count)
-                {
-                    throw new ArgumentOutOfRangeException();
-                }
-
                 return SubjectList[index];
             }
             set

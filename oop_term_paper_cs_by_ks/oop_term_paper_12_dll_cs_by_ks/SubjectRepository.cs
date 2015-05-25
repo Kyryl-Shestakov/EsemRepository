@@ -39,11 +39,6 @@ namespace oop_term_paper_12_dll_cs_by_ks
 
         public void AddSubject(Subject item)
         {
-            if(item == null)
-            {
-                throw new ArgumentNullException();
-            }
-
             if (!subjectList.Exists((currentItem) =>
                 {
                     return currentItem.Name.Equals(item.Name);
@@ -55,11 +50,6 @@ namespace oop_term_paper_12_dll_cs_by_ks
 
         public bool RemoveSubject(string discipline)
         {
-            if (discipline == null)
-            {
-                return false;
-            }
-
             bool foundAndDeleted = true;
 
             if (subjectList.Exists((item) => item.Name.Equals(discipline)))

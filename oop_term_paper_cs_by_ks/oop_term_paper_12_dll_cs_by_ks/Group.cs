@@ -46,21 +46,6 @@ namespace oop_term_paper_12_dll_cs_by_ks
 
         public static Group GroupFactory(int year, string groupId, List<Student> studentList, List<Subject> subjectList)
         {
-            if (groupId == null || studentList == null || subjectList == null)
-            {
-                throw new ArgumentNullException();
-            }
-
-            if (year < 1)
-            {
-                throw new ArgumentOutOfRangeException();
-            }
-
-            if (subjectList.Count == 0)
-            {
-                throw new ArgumentException();
-            }
-
             List<string> subjectNameList = new List<string>();
 
             foreach (Subject subject in subjectList)
@@ -73,11 +58,6 @@ namespace oop_term_paper_12_dll_cs_by_ks
 
         public void Add(Student item)
         {
-            if (item == null)
-            {
-                throw new ArgumentNullException();
-            }
-
             if (!StudentList.Exists((currentItem) =>
                 {
                     return currentItem.TranscriptNumber.Equals(item.TranscriptNumber);
@@ -89,37 +69,17 @@ namespace oop_term_paper_12_dll_cs_by_ks
 
         public void RemoveAt(int i)
         {
-            if (i < 0 || i >= StudentList.Count)
-            {
-                throw new ArgumentOutOfRangeException();
-            }
-
             StudentList.RemoveAt(i);
         }
 
         public void ReplaceAt(int i, Student item)
         {
-            if (item == null)
-            {
-                throw new ArgumentNullException();
-            }
-
-            if (i < 0 || i >= StudentList.Count)
-            {
-                throw new ArgumentOutOfRangeException();
-            }
-
             StudentList.RemoveAt(i);
             StudentList.Insert(i, item);
         }
 
         public int IndexOf(Student item)
         {
-            if (item == null)
-            {
-                throw new ArgumentNullException();
-            }
-
             foreach (Student student in StudentList)
             {
                 if (student.Equals(item))
@@ -141,11 +101,6 @@ namespace oop_term_paper_12_dll_cs_by_ks
         {
             get
             {
-                if (index < 0 || index >= StudentList.Count)
-                {
-                    throw new ArgumentOutOfRangeException();
-                }
-
                 return StudentList[index];
             }
             set
@@ -162,11 +117,6 @@ namespace oop_term_paper_12_dll_cs_by_ks
 
         public bool Contains(Student item)
         {
-            if (item == null)
-            {
-                throw new ArgumentNullException();
-            }
-
             foreach (Student student in StudentList)
             {
                 if (student.ToString().Equals(item.ToString()))

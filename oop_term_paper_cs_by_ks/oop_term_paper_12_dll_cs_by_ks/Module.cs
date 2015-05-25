@@ -37,11 +37,6 @@ namespace oop_term_paper_12_dll_cs_by_ks
 
         public static Module ModuleFactory(int gradeCount, List<double> labWorkGradeList, double moduleControlWorkGrade)
         {
-            if (labWorkGradeList == null)
-            {
-                throw new ArgumentNullException();
-            }
-
             if (gradeCount < 1 || moduleControlWorkGrade < 0.0)
             {
                 throw new ArgumentOutOfRangeException();
@@ -67,20 +62,10 @@ namespace oop_term_paper_12_dll_cs_by_ks
         {
             get
             {
-                if (index < 0 || index >= LabWorkGradeList.Count)
-                {
-                    throw new ArgumentOutOfRangeException();
-                }
-
                 return LabWorkGradeList[index];
             }
             set
             {
-                if (index < 0 || index >= LabWorkGradeList.Count)
-                {
-                    throw new ArgumentOutOfRangeException("There are no elements with such position");
-                }
-
                 if (value < 0.0 || value > 5.0)
                 {
                     throw new ArgumentOutOfRangeException("Such value is invalid for a grade");

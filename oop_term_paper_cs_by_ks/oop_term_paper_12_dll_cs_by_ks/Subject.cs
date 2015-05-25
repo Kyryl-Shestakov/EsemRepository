@@ -54,11 +54,6 @@ namespace oop_term_paper_12_dll_cs_by_ks
 
         public static Subject SubjectFactory(string name, Instructor instructor, int moduleCount, List<Module> moduleList, int examGrade)
         {
-            if (name == null || instructor == null || moduleList == null)
-            {
-                throw new ArgumentNullException();
-            }
-
             if (moduleCount < 1 || examGrade < 0 || examGrade > 100)
             {
                 throw new ArgumentOutOfRangeException();
@@ -94,11 +89,6 @@ namespace oop_term_paper_12_dll_cs_by_ks
         {
             get
             {
-                if (index < 0 || index >= ModuleList.Count)
-                {
-                    throw new ArgumentOutOfRangeException();
-                }
-
                 return ModuleList[index];
             }
             set
