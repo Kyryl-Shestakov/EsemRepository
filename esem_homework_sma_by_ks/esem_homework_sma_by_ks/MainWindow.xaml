@@ -9,7 +9,20 @@
         <TextBox x:Name="metricsTextBox" HorizontalAlignment="Left" Height="23" Margin="140,14,0,0" TextWrapping="Wrap" Text="metrics.dat" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="projectsNamesTextBox" HorizontalAlignment="Left" Height="23" Margin="140,45,0,0" TextWrapping="Wrap" Text="projects_names.txt" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="metricsNamesTextBox" HorizontalAlignment="Left" Height="23" Margin="140,76,0,0" TextWrapping="Wrap" Text="metrics_names.txt" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Load data" HorizontalAlignment="Left" Margin="332,48,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Load data" HorizontalAlignment="Left" Margin="332,48,0,0" VerticalAlignment="Top" Width="75" Click="LoadData_Button_Click"/>
+        <GroupBox Header="Default values" HorizontalAlignment="Left" Margin="24,125,0,0" VerticalAlignment="Top" Height="184" Width="323">
+            <Canvas HorizontalAlignment="Left" Height="164" Margin="10,10,-2,-12" VerticalAlignment="Top" Width="303">
+                <Label Content="Metrics:" Canvas.Left="10" Canvas.Top="10"/>
+                <Label Content="Project names:" Canvas.Left="10" Canvas.Top="61"/>
+                <Label Content="Metric names:" Canvas.Left="10" Canvas.Top="109"/>
+                <Button x:Name="metricsCreationButton" Content="Create" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Canvas.Left="111" Canvas.Top="13" Click="metricsCreationButton_Click"/>
+                <Button x:Name="projectNamesCreationButton" Content="Create" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Canvas.Left="111" Canvas.Top="64"/>
+                <Button x:Name="metricsNamesCreationButton" Content="Create" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Canvas.Left="111" Canvas.Top="112"/>
+                <Button x:Name="metricsCheckButton" Content="Check" Canvas.Left="218" Canvas.Top="13" Width="75" Click="metricsCheckButton_Click"/>
+                <Button x:Name="projectNamesCheckButton" Content="Check" Canvas.Left="218" Canvas.Top="64" Width="75" Click="projectNamesCheckButton_Click"/>
+                <Button x:Name="metricNamesCheckButton" Content="Check" Canvas.Left="218" Canvas.Top="112" Width="75" Click="metricNamesCheckButton_Click"/>
+            </Canvas>
+        </GroupBox>
 
     </Grid>
 </Window>
