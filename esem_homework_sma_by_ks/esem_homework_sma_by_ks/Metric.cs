@@ -22,7 +22,7 @@ namespace esem_homework_sma_by_ks
         public double[] Ranks { get; private set; }
 
         public static readonly int IntervalCount = 6;
-        public bool NormalDistributionFlag { get; private set; } //determined by the user!
+        public bool NormalDistributionFlag { get; set; } //determined by the user!
         
         public Metric(double[] values, string name, MetricType mt)
         {

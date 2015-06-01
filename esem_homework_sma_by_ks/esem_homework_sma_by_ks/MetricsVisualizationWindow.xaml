@@ -3,18 +3,29 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:DV="clr-namespace:System.Windows.Controls.DataVisualization;assembly=System.Windows.Controls.DataVisualization.Toolkit"
         xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
-        Title="MetricsVisualizationWindow" Height="342.857" Width="522.18" Closed="Window_Closed">
-    <Grid>
-        <DVC:Chart Name="MetricChart" Canvas.Top="80" Canvas.Left="10"  Height="250" Background="DarkGray" Margin="10,10,149,52">
+        Title="MetricsVisualizationWindow" Height="422.804" Width="974.688" Closed="Window_Closed">
+    <Grid Margin="10,0,0,0">
+        <DVC:Chart Name="MetricChart" Canvas.Top="80" Canvas.Left="10"  Height="285" Background="DarkGray" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="722">
             <DVC:Chart.Series>
-                <DVC:ColumnSeries Title="Metric" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}">
-                </DVC:ColumnSeries>
+                <DVC:ColumnSeries Title="Metric" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
             </DVC:Chart.Series>
             <DVC:Chart.Axes>
-                <DVC:LinearAxis x:Name="YLinearAxis" Orientation="Y" Title="Percentages" Interval="40" Foreground="Black" Background="Ivory" FontFamily="TimesNewRoman" FontSize="14" FontWeight="Bold"/>
-                <DVC:LinearAxis x:Name="XLinearAxis" Orientation="X" Title="Intervals" Interval="40" Foreground="Black" Background="Ivory" FontFamily="TimesNewRoman" FontSize="14" FontWeight="Bold"/>
+                <DVC:LinearAxis x:Name="YLinearAxis" Orientation="Y" Title="Percentages" Foreground="Black" Background="Ivory" FontFamily="TimesNewRoman" FontSize="14" FontWeight="Bold" Interval="10"/>
+                <DVC:LinearAxis x:Name="XLinearAxis" Orientation="X" Title="Intervals" Foreground="Black" Background="Ivory" FontFamily="TimesNewRoman" FontSize="14" FontWeight="Bold"/>
             </DVC:Chart.Axes>
         </DVC:Chart>
-        <ListBox x:Name="MetricListBox" HorizontalAlignment="Left" Height="167" Margin="404,10,0,0" VerticalAlignment="Top" Width="100"/>
+        <ListBox x:Name="MetricListBox" HorizontalAlignment="Left" Height="167" Margin="750,10,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="MetricListBox_SelectionChanged"/>
+        <Label Content="Sample mean:" HorizontalAlignment="Left" Margin="750,194,0,0" VerticalAlignment="Top" Width="114"/>
+        <Label x:Name="StandardDeviationLabel" Content="" HorizontalAlignment="Left" Margin="869,256,0,0" VerticalAlignment="Top"/>
+        <Label Content="Variance:" HorizontalAlignment="Left" Margin="750,225,0,0" VerticalAlignment="Top" Width="114"/>
+        <Label Content="Standard Deviation:" HorizontalAlignment="Left" Margin="750,256,0,0" VerticalAlignment="Top"/>
+        <Label Content="Kurtosis:" HorizontalAlignment="Left" Margin="750,287,0,0" VerticalAlignment="Top" Width="114"/>
+        <Label Content="Skewness:" HorizontalAlignment="Left" Margin="750,318,0,0" VerticalAlignment="Top" Width="114"/>
+        <Label x:Name="VarianceLabel" Content="" HorizontalAlignment="Left" Margin="869,225,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="SampleMeanLabel" Content="" HorizontalAlignment="Left" Margin="869,194,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="KurtosisLabel" Content="" HorizontalAlignment="Left" Margin="869,287,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="SkewnessLabel" Content="" HorizontalAlignment="Left" Margin="869,318,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="NormalDistributionCheckBox" Content="Normal Distribution" HorizontalAlignment="Left" Margin="54,320,0,0" VerticalAlignment="Top" Click="NormalDistributionCheckBox_Click"/>
+        <Button x:Name="NextButton" Content="Next" HorizontalAlignment="Left" Margin="54,362,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>

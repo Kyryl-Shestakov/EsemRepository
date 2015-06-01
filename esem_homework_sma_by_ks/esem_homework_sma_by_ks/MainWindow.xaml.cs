@@ -169,7 +169,11 @@ namespace esem_homework_sma_by_ks
 
         private void ViewDataButton_Click(object sender, RoutedEventArgs e)
         {
-            //TODO: metrics visualization
+            if (mf == null)
+            {
+                MessageBox.Show("Metrics were not loaded");
+                return;
+            }
 
             MetricsVisualizationWindow mvw = new MetricsVisualizationWindow(mf.metricsContainer);
             mvw.Owner = this;
