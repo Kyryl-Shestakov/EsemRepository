@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace esem_homework_sma_by_ks
 {
-    class MetricsSupplier
+    public class MetricsSupplier
     {
         //private static string defaultMetricsPath = "metrics.dat";
         private static int defaultTableWidth = 8;

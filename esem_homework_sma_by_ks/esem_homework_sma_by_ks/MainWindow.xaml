@@ -9,7 +9,7 @@
         <TextBox x:Name="metricsTextBox" HorizontalAlignment="Left" Height="23" Margin="140,14,0,0" TextWrapping="Wrap" Text="metrics.dat" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="projectsNamesTextBox" HorizontalAlignment="Left" Height="23" Margin="140,45,0,0" TextWrapping="Wrap" Text="projects_names.txt" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="metricsNamesTextBox" HorizontalAlignment="Left" Height="23" Margin="140,76,0,0" TextWrapping="Wrap" Text="metrics_names.txt" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Load data" HorizontalAlignment="Left" Margin="332,48,0,0" VerticalAlignment="Top" Width="75" Click="LoadData_Button_Click"/>
+        <Button x:Name="LoadDataButton" Content="Load" HorizontalAlignment="Left" Margin="336,13,0,0" VerticalAlignment="Top" Width="75" Click="LoadDataButton_Click"/>
         <GroupBox Header="Default values" HorizontalAlignment="Left" Margin="24,125,0,0" VerticalAlignment="Top" Height="184" Width="323">
             <Canvas HorizontalAlignment="Left" Height="164" Margin="10,10,-2,-12" VerticalAlignment="Top" Width="303">
                 <Label Content="Metrics:" Canvas.Left="10" Canvas.Top="10"/>
@@ -23,6 +23,6 @@
                 <Button x:Name="metricNamesCheckButton" Content="Check" Canvas.Left="218" Canvas.Top="112" Width="75" Click="metricNamesCheckButton_Click"/>
             </Canvas>
         </GroupBox>
-
+        <Button x:Name="ViewDataButton" Content="View" HorizontalAlignment="Left" Margin="336,44,0,0" VerticalAlignment="Top" Width="75" Click="ViewDataButton_Click"/>
     </Grid>
 </Window>

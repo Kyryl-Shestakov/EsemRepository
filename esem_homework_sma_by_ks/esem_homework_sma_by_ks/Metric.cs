@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace esem_homework_sma_by_ks
 {
-    class Metric
+    public class Metric
     {
         public double[] Values { get; private set; }
         public string Name { get; private set; }

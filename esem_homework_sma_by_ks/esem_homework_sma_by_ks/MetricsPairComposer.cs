@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace esem_homework_sma_by_ks
 {
-    class MetricsPairComposer
+    public class MetricsPairComposer
     {
         public Metric[] DirectMetrics { get; private set; }
         public Metric[] IndirectMetrics { get; private set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace esem_homework_sma_by_ks
 {
-    class MetricsContainer
+    public class MetricsContainer
     {
         public Metric[] Metrics { get; private set; }
         public string[] ProjectNames { get; private set; }

@@ -36,6 +36,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="system.windows.controls.datavisualization.toolkit">
+      <HintPath>D:\Documents\Visual Studio 2013\Projects\Educational_Labs\sophomore_year\RGR Metrics\RGR\system.windows.controls.datavisualization.toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -47,6 +50,10 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Documents\Visual Studio 2013\Projects\Educational_Labs\sophomore_year\RGR Metrics\RGR\WPFToolkit.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -67,11 +74,18 @@
     <Compile Include="MetricsPairComposer.cs" />
     <Compile Include="MetricsPairContainer.cs" />
     <Compile Include="MetricsSupplier.cs" />
+    <Compile Include="MetricsVisualizationWindow.xaml.cs">
+      <DependentUpon>MetricsVisualizationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MetricType.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MetricsVisualizationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Metric.cs" />

@@ -36,7 +36,7 @@ namespace esem_homework_sma_by_ks
             InitializeComponent();
         }
 
-        private void LoadData_Button_Click(object sender, RoutedEventArgs e)
+        private void LoadDataButton_Click(object sender, RoutedEventArgs e)
         {
             if (File.Exists(metricsTextBox.Text))
             {
@@ -48,6 +48,8 @@ namespace esem_homework_sma_by_ks
                         mf = new MetricsFacade(ms);
                         mf.ObtaingMetricsContainer();
                         mf.ObtainMetricsPairsContainer();
+
+                        MessageBox.Show("Metrics were loaded");
                     }
                     else
                     {
@@ -163,6 +165,16 @@ namespace esem_homework_sma_by_ks
             {
                 MessageBox.Show("Default metric names file does not exist", "", MessageBoxButton.OK, MessageBoxImage.Exclamation);
             }
+        }
+
+        private void ViewDataButton_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO: metrics visualization
+
+            MetricsVisualizationWindow mvw = new MetricsVisualizationWindow(mf.metricsContainer);
+            mvw.Owner = this;
+            this.Hide();
+            mvw.Show();
         }
     }
 }

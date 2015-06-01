@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace esem_homework_sma_by_ks
 {
-    class MetricsPairsContainer
+    public class MetricsPairsContainer
     {
         private static double correlationThreshold = 0.5;
         public MetricsPair[] MetricsPairs { get; private set; }
