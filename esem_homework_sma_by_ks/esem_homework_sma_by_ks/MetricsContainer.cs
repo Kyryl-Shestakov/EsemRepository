@@ -28,7 +28,7 @@ namespace esem_homework_sma_by_ks
             {
                 for (int j = 0; j < Metrics[i].Values.Length; ++j)
                 {
-                    if (Metrics[i].Values[j] > AccuracyThreshold)
+                    if (Metrics[i].Accuracies[j] > AccuracyThreshold)
                     {
                         AbnormalProjectFlags[j] = true;
                     }
@@ -44,6 +44,7 @@ namespace esem_homework_sma_by_ks
             {
                 if (AbnormalProjectFlags[i])
                 {
+
                     --projectCount;
                 }
             }
