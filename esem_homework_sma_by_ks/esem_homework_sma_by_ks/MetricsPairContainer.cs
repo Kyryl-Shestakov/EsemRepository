@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace esem_homework_sma_by_ks
 {
-    public class MetricsPairsContainer
+    public class MetricsPairContainer
     {
         private static double correlationThreshold = 0.5;
         public MetricsPair[] MetricsPairs { get; private set; }
 
-        public MetricsPairsContainer(MetricsPair[] metricsPairs)
+        public MetricsPairContainer(MetricsPair[] metricsPairs)
         {
             this.MetricsPairs = metricsPairs;
         }

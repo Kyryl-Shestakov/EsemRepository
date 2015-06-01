@@ -85,5 +85,13 @@ namespace esem_homework_sma_by_ks
         {
             mc.Metrics[MetricListBox.SelectedIndex].NormalDistributionFlag = NormalDistributionCheckBox.IsChecked.Value;
         }
+
+        private void NextButton_Click(object sender, RoutedEventArgs e)
+        {
+            MetricsPairsVisualizationWindow mpvw = new MetricsPairsVisualizationWindow(((MainWindow)this.Owner).mf.metricsPairsContainer);
+            mpvw.Owner = this;
+            this.Hide();
+            mpvw.Show();
+        }
     }
 }

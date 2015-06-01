@@ -73,6 +73,9 @@
     <Compile Include="MetricsPair.cs" />
     <Compile Include="MetricsPairComposer.cs" />
     <Compile Include="MetricsPairContainer.cs" />
+    <Compile Include="MetricsPairsVisualizationWindow.xaml.cs">
+      <DependentUpon>MetricsPairsVisualizationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MetricsSupplier.cs" />
     <Compile Include="MetricsVisualizationWindow.xaml.cs">
       <DependentUpon>MetricsVisualizationWindow.xaml</DependentUpon>
@@ -82,6 +85,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MetricsPairsVisualizationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MetricsVisualizationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

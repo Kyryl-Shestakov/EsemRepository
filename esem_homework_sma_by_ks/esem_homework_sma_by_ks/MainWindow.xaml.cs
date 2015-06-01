@@ -29,7 +29,7 @@ namespace esem_homework_sma_by_ks
         private static string defaultMetricPath = "metrics.dat";
         private static string defaultProjectNamesPath = "projects_names.txt";
         private static string defaultMetricNamesPath = "metrics_names.txt";
-        private MetricsFacade mf;
+        public MetricsFacade mf { get; private set; }
 
         public MainWindow()
         {
