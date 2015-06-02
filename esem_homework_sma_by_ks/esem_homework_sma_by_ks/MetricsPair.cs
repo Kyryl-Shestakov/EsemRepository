@@ -23,13 +23,13 @@ namespace esem_homework_sma_by_ks
         public double FirstLogarithmicCoefficient { get; private set; }
         public double SecondLogarithmicCoefficient { get; private set; }
 
-        public double[] LinearValues;
-        public double[] PolynomialValues;
-        public double[] LogarithmicValues;
+        public double[] LinearValues { get; private set; }
+        public double[] PolynomialValues { get; private set; }
+        public double[] LogarithmicValues { get; private set; }
 
-        public double LinearSSE;
-        public double PolynomialSSE;
-        public double LogarithmicSSE;
+        public double LinearSSE { get; private set; }
+        public double PolynomialSSE { get; private set; }
+        public double LogarithmicSSE { get; private set; }
 
         public MetricsPair(string name, Metric first, Metric second)
         {
@@ -80,6 +80,9 @@ namespace esem_homework_sma_by_ks
         {
             this.FirstLinearCoefficient = flc;
             this.SecondLinearCoefficient = slc;
+
+            LinearValues = new double[DirectMetric.Values.Length];
+
             CalculateLinearValues();
             CalculateLinearSSE();
         }
@@ -88,6 +91,9 @@ namespace esem_homework_sma_by_ks
         {
             this.FirstLogarithmicCoefficient = flc;
             this.SecondLogarithmicCoefficient = slc;
+
+            LogarithmicValues = new double[DirectMetric.Values.Length];
+
             CalculateLogarithmicValues();
             CalculateLogarithmicSSE();
         }
@@ -97,6 +103,9 @@ namespace esem_homework_sma_by_ks
             this.FirstPolynomialCoefficient = fpc;
             this.SecondPolynomialCoefficient = spc;
             this.ThirdPolynomialCoefficient = tpc;
+
+            PolynomialValues = new double[DirectMetric.Values.Length];
+
             CalculatePolynomialValues();
             CalculatePolynomialSSE();
         }
