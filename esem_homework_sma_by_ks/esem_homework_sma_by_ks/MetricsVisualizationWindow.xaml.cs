@@ -88,7 +88,8 @@ namespace esem_homework_sma_by_ks
 
         private void NextButton_Click(object sender, RoutedEventArgs e)
         {
-            MetricsPairsVisualizationWindow mpvw = new MetricsPairsVisualizationWindow(((MainWindow)this.Owner).mf.metricsPairsContainer);
+            MetricsPairContainer mpc = ((MainWindow)this.Owner).mf.ObtainMetricsPairsContainer();
+            MetricsPairsVisualizationWindow mpvw = new MetricsPairsVisualizationWindow(mpc);
             mpvw.Owner = this;
             this.Hide();
             mpvw.Show();

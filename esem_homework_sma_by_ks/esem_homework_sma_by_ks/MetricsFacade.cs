@@ -19,7 +19,7 @@ namespace esem_homework_sma_by_ks
             this.metricsSupplier = metricsSupplier;
         }
 
-        public MetricsContainer ObtaingMetricsContainer()
+        public MetricsContainer ObtainMetricsContainer()
         {
             Metric[] metrics = metricsSupplier.SupplyMetrics();
             string[] projectsNames = metricsSupplier.SupplyProjectsNames();
@@ -31,6 +31,12 @@ namespace esem_homework_sma_by_ks
         {
             Metric[] normalMetrics = this.metricsContainer.SupplyNormalMetrics();
             string[] normalProjectsNames = this.metricsContainer.SupplyNormalProjectsNames();
+            
+            for (int i = 0; i < normalMetrics.Length; ++i)
+            {
+                normalMetrics[i].NormalDistributionFlag = metricsContainer.Metrics[i].NormalDistributionFlag;
+            }
+
             this.normalMetricsContainer = new MetricsContainer(normalMetrics, normalProjectsNames);
 
             MetricsPairComposer metricsPairComposer = new MetricsPairComposer(normalMetrics);
@@ -40,7 +46,7 @@ namespace esem_homework_sma_by_ks
             MetricsPair[] dependentMetricsPairs = this.metricsPairsContainer.SupplyDependentMetricsPairs();
             this.dependentMetricsPairsContainer = new MetricsPairContainer(dependentMetricsPairs);
 
-            return this.dependentMetricsPairsContainer;
+            return this.metricsPairsContainer;
         }
     }
 }
