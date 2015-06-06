@@ -7,10 +7,34 @@
     <Grid>
         <DVC:Chart Canvas.Top="80" Canvas.Left="10" Name="MetricPairChart" Width="552" Height="250" Background="LightSteelBlue" HorizontalAlignment="Left" VerticalAlignment="Top">
             <DVC:Chart.Series>
-                <DVC:ScatterSeries Title="Scatter" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
-                <DVC:LineSeries Title="Linear" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
-                <DVC:LineSeries Title="Logarithmic" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
-                <DVC:LineSeries Title="Polynomial" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
+                <DVC:ScatterSeries Title="Scatter" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}">
+                    <DVC:ScatterSeries.DataPointStyle>
+                        <Style TargetType="DVC:ScatterDataPoint">
+                            <Setter Property="Background" Value="Aquamarine" />
+                        </Style>
+                    </DVC:ScatterSeries.DataPointStyle>
+                </DVC:ScatterSeries>
+                <DVC:LineSeries Title="Linear" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}">
+                    <DVC:LineSeries.DataPointStyle>
+                        <Style TargetType="DVC:LineDataPoint">
+                            <Setter Property="Background" Value="BurlyWood" />
+                        </Style>
+                    </DVC:LineSeries.DataPointStyle>
+                </DVC:LineSeries>
+                <DVC:LineSeries Title="Logarithmic" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}">
+                    <DVC:LineSeries.DataPointStyle>
+                        <Style TargetType="DVC:LineDataPoint">
+                            <Setter Property="Background" Value="LightSalmon" />
+                        </Style>
+                    </DVC:LineSeries.DataPointStyle>
+                </DVC:LineSeries>
+                <DVC:LineSeries Title="Polynomial" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}">
+                    <DVC:LineSeries.DataPointStyle>
+                        <Style TargetType="DVC:LineDataPoint">
+                            <Setter Property="Background" Value="Maroon" />
+                        </Style>
+                    </DVC:LineSeries.DataPointStyle>
+                </DVC:LineSeries>
             </DVC:Chart.Series>
             <DVC:Chart.Axes>
                 <DVC:LinearAxis x:Name="YLinearAxis" Orientation="Y" Title="" Foreground="Black" Background="Ivory" FontFamily="TimesNewRoman" FontSize="14" FontWeight="Bold"/>

@@ -7,7 +7,13 @@
     <Grid Margin="10,0,0,0">
         <DVC:Chart Name="MetricChart" Canvas.Top="80" Canvas.Left="10"  Height="285" Background="DarkGray" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="722">
             <DVC:Chart.Series>
-                <DVC:ColumnSeries Title="Metric" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}"/>
+                <DVC:ColumnSeries Title="Metric" IndependentValueBinding="{Binding Path=Key}" DependentValueBinding="{Binding Path=Value}">
+                    <DVC:ColumnSeries.DataPointStyle>
+                        <Style TargetType="DVC:ColumnDataPoint">
+                            <Setter Property="Background" Value="DarkKhaki" />
+                        </Style>
+                    </DVC:ColumnSeries.DataPointStyle>
+                </DVC:ColumnSeries>
             </DVC:Chart.Series>
             <DVC:Chart.Axes>
                 <DVC:LinearAxis x:Name="YLinearAxis" Orientation="Y" Title="Percentages" Foreground="Black" Background="Ivory" FontFamily="TimesNewRoman" FontSize="14" FontWeight="Bold" Interval="10"/>
