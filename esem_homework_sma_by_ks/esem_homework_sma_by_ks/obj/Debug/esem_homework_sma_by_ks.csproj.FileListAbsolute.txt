@@ -23,6 +23,7 @@ C:\Users\Kyryl\Documents\GitHub\EsemRepository\esem_homework_sma_by_ks\esem_home
 C:\Users\Kyryl\Documents\GitHub\EsemRepository\esem_homework_sma_by_ks\esem_homework_sma_by_ks\obj\Debug\MetricsVisualizationWindow.g.cs
 C:\Users\Kyryl\Documents\GitHub\EsemRepository\esem_homework_sma_by_ks\esem_homework_sma_by_ks\bin\Debug\system.windows.controls.datavisualization.toolkit.dll
 C:\Users\Kyryl\Documents\GitHub\EsemRepository\esem_homework_sma_by_ks\esem_homework_sma_by_ks\bin\Debug\WPFToolkit.dll
-C:\Users\Kyryl\Documents\GitHub\EsemRepository\esem_homework_sma_by_ks\esem_homework_sma_by_ks\obj\Debug\esem_homework_sma_by_ks.csprojResolveAssemblyReference.cache
 C:\Users\Kyryl\Documents\GitHub\EsemRepository\esem_homework_sma_by_ks\esem_homework_sma_by_ks\obj\Debug\MetricsPairsVisualizationWindow.baml
 C:\Users\Kyryl\Documents\GitHub\EsemRepository\esem_homework_sma_by_ks\esem_homework_sma_by_ks\obj\Debug\MetricsPairsVisualizationWindow.g.cs
+C:\Users\Kyryl\Documents\GitHub\EsemRepository\esem_homework_sma_by_ks\esem_homework_sma_by_ks\bin\Debug\esem_homework_sma_by_ks.exe.CodeAnalysisLog.xml
+C:\Users\Kyryl\Documents\GitHub\EsemRepository\esem_homework_sma_by_ks\esem_homework_sma_by_ks\bin\Debug\esem_homework_sma_by_ks.exe.lastcodeanalysissucceeded

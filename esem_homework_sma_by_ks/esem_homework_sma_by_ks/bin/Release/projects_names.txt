@@ -1,0 +1,30 @@
+Data Crow
+GanttProject
+TuxGuitar
+ImageJ
+jEdit
+JFreeChart
+JDownloader
+Jitsi
+Nokogiri
+CyberToolbox for Java
+Sweet Home 3D
+Java Treeview
+aTunes
+Java2Html
+PlanetSim
+Columba
+Kitchen garden aid
+Simulum (Mulumis)
+Freeplane
+Iteraplan
+Jmol
+FreeCol
+Pixelitor
+Text Trix
+FuncPlotter
+Robocode
+Tomcat
+Art of Illusion
+jGnash
+Memoranda
